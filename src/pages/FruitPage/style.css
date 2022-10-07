@@ -20,9 +20,11 @@
 @media (min-width: 768px) {
     .container-fruit-detais-content {
         display: flex;
-        width: 100%;
+        width: 58%;
         justify-content: center;
-        margin-top: 50px;
+        margin: 50px auto;
+        padding: 25px;
+        box-shadow: 0 0 3px #ccc;
     }
     .container-fruit-detais-content img {
         display: auto;

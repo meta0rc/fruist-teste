@@ -3,3 +3,19 @@
     margin: 10px;
     font-size: 3em;
 }
+@media (min-width: 768px) {
+    .list-fruits {
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+        margin: 0 auto;
+
+    }
+    .list-fruits li {
+        width: 250px;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+}
