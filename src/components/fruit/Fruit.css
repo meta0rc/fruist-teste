@@ -1,0 +1,21 @@
+.card-fruit {
+    width: 90%;
+    padding: 10px;
+    box-sizing: border-box;
+    justify-content: space-between;
+    box-shadow: 0 0 3px #ccc;
+    margin: 10px auto;
+    border-radius: 3px;
+}
+.card-fruit:hover {
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 1s;
+}
+.content-fruit li {
+    margin: 3px 0;
+} 
+.content-fruit strong { 
+    text-transform: capitalize;
+    color: #5c5c5c;
+}

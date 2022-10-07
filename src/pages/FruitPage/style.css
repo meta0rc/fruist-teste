@@ -1,0 +1,31 @@
+.contaienr-info-fruit { 
+    background-color: #ebebeb;
+    padding: 2%;
+}
+
+.contaienr-info-fruit li {
+    margin: 5px;
+}
+.contaienr-info-fruit strong  {
+    text-transform: capitalize;
+}
+.container-fruit-detais-content img {
+    display: block;
+    margin: 0 auto;
+}
+.container-fruit-details h1 {
+    text-align: center;
+    margin-top: 10px;
+}
+@media (min-width: 768px) {
+    .container-fruit-detais-content {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-top: 50px;
+    }
+    .container-fruit-detais-content img {
+        display: auto;
+        margin: 0;
+    }
+}

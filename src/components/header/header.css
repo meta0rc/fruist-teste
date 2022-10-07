@@ -1,0 +1,17 @@
+.top-header { 
+    background: var(--second-color);
+    height: 20px;
+    width: 100%;
+}
+header { 
+    background: var(--first-color);
+}
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10px;
+}
+.container-icons svg {
+    margin: 0 10px;
+    cursor: pointer;
+}
