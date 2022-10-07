@@ -1,14 +1,16 @@
 import { useContext } from "react";
 import { FruitContext, FruitType } from "../../context/fruitContext";
 import "./Fruit.css";
-export const Fruit = (props: FruitType) => {
+
+export const Fruit = (props: FruitType,) => {
+
   const context = useContext(FruitContext);
 
   return (
     <li
       className="card-fruit flex"
       key={`chave_${props.name}`}
-      onClick={() => context.changeFruit({ ...props })}
+      onClick={() => context.changeFruit({ ...props})}
     >
       <div className="content-fruit">
         {Object.keys(props).map((keys, index) => {

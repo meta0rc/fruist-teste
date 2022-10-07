@@ -1,6 +1,6 @@
 import { createContext } from "react";
 
-export type FruitType = {
+export interface FruitType {
     name: string
     calories: string
     protein: string
