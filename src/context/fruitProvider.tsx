@@ -5,31 +5,28 @@ import { FruitContext, FruitType } from "./fruitContext";
 
 export const FruitProvider = ({ children }: { children: JSX.Element }) => {
   const api = useApi();
-
-  const [fruit, setFruit] = useState<FruitType | null>(null);
+  const [fruit, setFruit] = useState(false);
   const [fruits, setFruits] = useState();
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {
-    const persistFruit = () => {
-      const localFruit = localStorage.getItem('fruit')
-      if(localFruit) {
-        setFruit(JSON.parse(localFruit));
-      }
+    if(localStorage.getItem('fruit')) {
+      setFruit(true)
     }
-    persistFruit()
-  }, [useApi])
+  }, [])  
 
   const changeFruit = (Fruit: FruitType | null) => {
+
     if (Fruit != null) {
-      setFruit(Fruit);
-      localStorage.setItem('fruit', JSON.stringify(Fruit))
       navigate(`/${Fruit.name}`);
+      setFruit(true)
+      localStorage.setItem('fruit', Fruit.name)
+
     } else {
-      localStorage.removeItem('fruit')
-      setFruit(Fruit);
       navigate("/");
+      setFruit(false)
+      localStorage.removeItem('fruit')
     }
   }
   const getFruits = async () => {
@@ -48,7 +45,7 @@ export const FruitProvider = ({ children }: { children: JSX.Element }) => {
   };
 
   return (
-    <FruitContext.Provider value={{ fruits, loading, fruit, getFruits, changeFruit }}>
+    <FruitContext.Provider value={{ fruit, fruits, loading, getFruits, changeFruit }}>
       {children}
     </FruitContext.Provider>
   )

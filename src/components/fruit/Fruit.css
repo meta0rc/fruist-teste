@@ -7,6 +7,7 @@
     margin: 10px auto;
     border-radius: 3px;
 }
+
 .card-fruit:hover {
     cursor: pointer;
     opacity: 0.5;
@@ -18,4 +19,9 @@
 .content-fruit strong { 
     text-transform: capitalize;
     color: #5c5c5c;
+}
+@media (max-width: 500px) {
+    .fruit-image img {
+        width: 100% !important;
+    }
 }

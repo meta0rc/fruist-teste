@@ -11,8 +11,8 @@ export interface FruitType {
     photo: string
 }
 export type FruitContextType = {
+    fruit?: any
     fruits: any
-    fruit: FruitType | null
     getFruits: () => Promise<Boolean>
     loading: boolean
     changeFruit: (fruit: FruitType) => void

@@ -12,17 +12,21 @@ export const Fruit = (props: FruitType,) => {
       key={`chave_${props.name}`}
       onClick={() => context.changeFruit({ ...props})}
     >
-      <div className="content-fruit">
+      <ul className="content-fruit">
         {Object.keys(props).map((keys, index) => {
           if (keys != "photo") {
             return (
-              <li>
-                <strong>{keys}</strong>: {Object.values(props)[index]}
+              <li key={'chave' + keys + index}>
+                <strong>{keys}:</strong> 
+                
+                  {Object.values(props)[index]}
+                
+  
               </li>
             );
           }
         })}
-      </div>
+      </ul>
       <div className="fruit-image">
         <img src={props.photo} alt="image-fruit" width={150} />
       </div>
