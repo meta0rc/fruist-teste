@@ -21,7 +21,7 @@ export const FruitPage = () => {
     <>
       {page !== 'Loading' ? 
       <>
-      <Header />
+      <Header pageFruit={true}/>
       <div className="container-fruit-details">
         <h1> {page[0].name} </h1>
         <div className="container-fruit-detais-content">

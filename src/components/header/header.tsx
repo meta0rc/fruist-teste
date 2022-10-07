@@ -6,9 +6,12 @@ import "./header.css";
 import { useContext } from "react";
 import { FruitContext } from "../../context/fruitContext";
 
-export const Header = () => {
+type fruitPage = {
+  pageFruit?: boolean
+}
+export const Header = (props: fruitPage) => {
   const context = useContext(FruitContext);
-
+  
   return (
     <header>
       <div className="top-header"></div>
@@ -18,7 +21,7 @@ export const Header = () => {
           <Logo />
         </div>
         <div className="container-refresh container-icons">
-          {context.fruit ? (
+          {props.pageFruit ? (
             <BsArrowLeft onClick={() => context.changeFruit(null!)} size={30} />
           ) : (
             <>
